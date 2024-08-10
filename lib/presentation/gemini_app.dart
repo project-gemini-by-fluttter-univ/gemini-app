@@ -8,7 +8,7 @@ class GeminiApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text("wake"),
+          child: Text("上原宇行（ひろゆき）"),
         ),
       ),
     );
