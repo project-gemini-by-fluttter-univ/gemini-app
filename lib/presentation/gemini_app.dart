@@ -8,7 +8,9 @@ class GeminiApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
+          feature/1_shimihide
           child: Text("shimihide"),
+ 　　　　　　　　　　　　　　　　　　develop
         ),
       ),
     );
