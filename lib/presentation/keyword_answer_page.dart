@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class KeywordAnswer extends StatelessWidget {
-  const KeywordAnswer({super.key});
+class KeywordAnswerPage extends StatelessWidget {
+  const KeywordAnswerPage({super.key});
 
   @override
   Widget build(BuildContext context) {
