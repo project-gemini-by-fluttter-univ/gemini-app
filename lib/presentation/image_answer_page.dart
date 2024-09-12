@@ -20,6 +20,12 @@ class ImageAnswerPage extends StatelessWidget {
                     color: Colors.lightBlue
                 ),
               ),
+              Image.network(
+                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
+                width: 270,
+                height: 180,
+                fit: BoxFit.cover,
+              ),
               Container(
                 height: 107,
                 width: 320,
