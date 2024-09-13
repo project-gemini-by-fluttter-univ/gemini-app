@@ -41,16 +41,16 @@ class GeminiApp extends StatelessWidget {
                     "キーワードでバズる",
                     style: TextStyle(
                         color: Colors.white,
-                        fontSize: 20.0,
-                        fontWeight: FontWeight.w500),
-                  ),
-                  style: ElevatedButton.styleFrom(
+                 style: ElevatedButton.styleFrom(
                       fixedSize: Size(240, double.infinity),
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(10.0),
                       ),
                       backgroundColor: Colors.blue)),
-              SizedBox(
+                          fontSize: 20.0,
+                        fontWeight: FontWeight.w500),
+                  ),
+             SizedBox(
                 height: 30,
               ),
               ElevatedButton(
