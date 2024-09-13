@@ -1,6 +1,6 @@
 # 共同開発17：Progect Gemini
 
-これはFlutter大学 共同開発 第17期のProgect Geminiのプロジェクトです。
+これはFlutter大学 共同開発 第17期のProgect Geminiのプロジェクトです!
 
 ## これから参加される方へ
 
