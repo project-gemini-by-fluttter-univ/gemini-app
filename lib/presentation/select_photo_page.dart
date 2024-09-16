@@ -22,7 +22,11 @@ class SelectPhotoPage extends StatelessWidget {
                   SizedBox(),
                 ],
               ),
-              Image.asset('images/cat.png'),
+              Image.asset(
+                'images/cat.png',
+                width: 240,
+                height: 200,
+              ),
               const SizedBox(),
               ElevatedButton(
                 onPressed: () {},
