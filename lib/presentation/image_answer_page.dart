@@ -6,6 +6,9 @@ class ImageAnswerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'M PLUS 1',
+      ),
       home: Scaffold(
         body: Center(
           child: Column(
@@ -17,30 +20,26 @@ class ImageAnswerPage extends StatelessWidget {
                 style: TextStyle(
                     fontSize: 29,
                     fontWeight: FontWeight.bold,
-                    color: Colors.lightBlue
-                ),
+                    color: Colors.lightBlue),
               ),
               Image.network(
-                  'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
+                'https://flutter.github.io/assets-for-api-docs/assets/widgets/owl-2.jpg',
                 width: 270,
                 height: 180,
                 fit: BoxFit.cover,
               ),
               Container(
-                height: 107,
-                width: 320,
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
+                  height: 107,
+                  width: 320,
+                  padding: const EdgeInsets.all(12),
+                  decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10.0),
                     border: Border.all(color: Colors.lightBlue, width: 1),
-                ),
-                child: const Text(
-                    '『ふふ、このソファ、俺専用だからね。』とでも言わんばかりの余裕っぷり。',
-                  style: TextStyle(
-                    fontSize: 19
                   ),
-                )
-              ),
+                  child: const Text(
+                    '『ふふ、このソファ、俺専用だからね。』とでも言わんばかりの余裕っぷり。',
+                    style: TextStyle(fontSize: 19),
+                  )),
               ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
@@ -52,7 +51,7 @@ class ImageAnswerPage extends StatelessWidget {
                   ),
                 ),
                 child: const Text(
-                    'TOPへ戻る',
+                  'TOPへ戻る',
                   style: TextStyle(
                     fontSize: 18,
                   ),

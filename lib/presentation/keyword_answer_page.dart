@@ -6,6 +6,9 @@ class KeywordAnswerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'M PLUS 1',
+      ),
       home: Scaffold(
         body: Padding(
           padding: const EdgeInsets.all(32.0),
