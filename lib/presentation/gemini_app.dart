@@ -8,7 +8,7 @@ class GeminiApp extends StatelessWidget {
     return const MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Text("上原宇行"),
+          child: SelectableText("上原宇行"),
         ),
       ),
     );
