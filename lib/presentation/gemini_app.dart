@@ -5,8 +5,11 @@ class GeminiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'M PLUS 1',
+      ),
+      home: const Scaffold(
         body: Center(
           child: Text("上原宇行"),
         ),
