@@ -6,9 +6,11 @@ class GeminiApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: SelectableText("上原宇行"),
+      home: SelectionArea(
+        child: Scaffold(
+          body: Center(
+            child: Text("上原宇行"),
+          ),
         ),
       ),
     );
