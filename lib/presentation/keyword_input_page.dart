@@ -12,13 +12,8 @@ class _KeywordInputPageState extends State<KeywordInputPage> {
   final TextEditingController _keywordController2 = TextEditingController();
 
   @override
-  void disposeController1() {
+  void dispose() {
     _keywordController1.dispose();
-    super.dispose();
-  }
-
-  @override
-  void disposeController2() {
     _keywordController2.dispose();
     super.dispose();
   }
@@ -56,25 +51,19 @@ class _KeywordInputPageState extends State<KeywordInputPage> {
                       padding: EdgeInsets.only(bottom: 8.0),
                       child: Text('キーワード１'),
                     ),
-                    SizedBox(
-                      // height: 240,
-                      // width: 480,
-                      child: TextField(
-                        controller: _keywordController1,
-                        maxLines: 3,
-                        minLines: 3,
-                        decoration: const InputDecoration(
-                          labelText: 'お魚',
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0xFF19AAE8),
-                            ),
+                    TextField(
+                      controller: _keywordController1,
+                      maxLines: 3,
+                      minLines: 3,
+                      decoration: const InputDecoration(
+                        hintText: 'お魚',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFF19AAE8),
                           ),
                         ),
-                        onChanged: (text) {
-                          // print("Current text: $text");
-                        },
                       ),
+                      onChanged: (text) {},
                     ),
                   ],
                 ),
@@ -93,25 +82,19 @@ class _KeywordInputPageState extends State<KeywordInputPage> {
                       padding: EdgeInsets.only(bottom: 8.0),
                       child: Text('キーワード２'),
                     ),
-                    SizedBox(
-                      // height: 240,
-                      // width: 480,
-                      child: TextField(
-                        controller: _keywordController2,
-                        maxLines: 3,
-                        minLines: 3,
-                        decoration: const InputDecoration(
-                          labelText: '富士山',
-                          border: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Color(0xFF19AAE8),
-                            ),
+                    TextField(
+                      controller: _keywordController2,
+                      maxLines: 3,
+                      minLines: 3,
+                      decoration: const InputDecoration(
+                        hintText: '富士山',
+                        border: OutlineInputBorder(
+                          borderSide: BorderSide(
+                            color: Color(0xFF19AAE8),
                           ),
                         ),
-                        onChanged: (text) {
-                          // print("Current text: $text");
-                        },
                       ),
+                      onChanged: (text) {},
                     ),
                   ],
                 ),
