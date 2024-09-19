@@ -9,11 +9,13 @@ class GeminiApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'M PLUS 1',
       ),
-      home: const Scaffold(
+    home: SelectionArea(
+      child: const Scaffold(
         body: Center(
           child: Text("上原宇行"),
         ),
       ),
+    ),
     );
   }
 }
