@@ -5,14 +5,17 @@ class GeminiApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: SelectionArea(
-        child: Scaffold(
-          body: Center(
-            child: Text("上原宇行"),
-          ),
+    return MaterialApp(
+      theme: ThemeData(
+        fontFamily: 'M PLUS 1',
+      ),
+    home: SelectionArea(
+      child: const Scaffold(
+        body: Center(
+          child: Text("上原宇行"),
         ),
       ),
+    ),
     );
   }
 }
