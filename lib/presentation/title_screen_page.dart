@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class GeminiApp extends StatelessWidget {
-  const GeminiApp({super.key});
+class TitlePage extends StatelessWidget {
+  const TitlePage({super.key});git pull origin develop
 
   @override
   Widget build(BuildContext context) {
