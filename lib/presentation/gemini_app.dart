@@ -1,5 +1,6 @@
-import 'package:flutter/material.dart';
 
+<<<<<<< HEAD
+=======
 class GeminiApp extends StatelessWidget {
   const GeminiApp({super.key});
 
@@ -19,3 +20,4 @@ class GeminiApp extends StatelessWidget {
     );
   }
 }
+>>>>>>> 998d36dd28eca6feb1b3133b156fb549f7b040f2
