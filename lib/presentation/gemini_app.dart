@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:gemini_app/presentation/title_page.dart';
+import 'package:google_generative_ai/google_generative_ai.dart';
 
 class GeminiApp extends StatelessWidget {
-  const GeminiApp({super.key});
+  const GeminiApp({
+    super.key,
+    required this.model,
+  });
+
+  final GenerativeModel model;
 
   @override
   Widget build(BuildContext context) {
@@ -9,13 +16,9 @@ class GeminiApp extends StatelessWidget {
       theme: ThemeData(
         fontFamily: 'M PLUS 1',
       ),
-    home: SelectionArea(
-      child: const Scaffold(
-        body: Center(
-          child: Text("上原宇行"),
-        ),
+      home: TitlePage(
+        model: model,
       ),
-    ),
     );
   }
 }
