@@ -1,49 +1,92 @@
 import 'package:flutter/material.dart';
+import 'package:gemini_app/presentation/keyword_input_page.dart';
+import 'package:gemini_app/presentation/select_photo_page.dart';
+import 'package:google_generative_ai/google_generative_ai.dart';
 
-class KeywordAnswerPage extends StatelessWidget {
-  const KeywordAnswerPage({super.key});
+class TitlePage extends StatelessWidget {
+  const TitlePage({super.key, required this.model});
+
+  final GenerativeModel model;
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Padding(
-          padding: const EdgeInsets.all(32.0),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              const Text(
-                'バズる文章はこちら！',
+    return Scaffold(
+      body: SizedBox(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Center(
+              child: Text(
+                "あなたのバズをお助け！",
                 style: TextStyle(
-                    fontSize: 32,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.lightBlue),
+                    color: Colors.blue,
+                    fontSize: 30.0,
+                    fontWeight: FontWeight.bold),
               ),
-              Container(
-                height: 300,
-                width: 300,
-                padding: const EdgeInsets.all(12),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15),
-                  border: Border.all(color: Colors.lightBlue),
-                ),
-                child: const Text(
-                    '富士山頂で釣り！？標高3776mで何が釣れるの？まさか、雲とか？ #富士山 #釣り #妄想旅行'),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            const Center(
+              child: Text(
+                "BUZZ-AI",
+                style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 60.0,
+                    fontWeight: FontWeight.w700),
               ),
-              ElevatedButton(
-                onPressed: () {},
+            ),
+            const SizedBox(
+              height: 150,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => KeywordInputPage(
+                              model: model,
+                            )),
+                  );
+                },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Colors.lightBlue,
-                  foregroundColor: Colors.white,
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10.0),
-                  ),
-                ),
-                child: const Text('TOPへ戻る'),
-              ),
-            ],
-          ),
+                    fixedSize: const Size(240, double.infinity),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    backgroundColor: Colors.blue),
+                child: const Text(
+                  "キーワードでバズる",
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w500),
+                )),
+            const SizedBox(
+              height: 30,
+            ),
+            ElevatedButton(
+                onPressed: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                        builder: (context) => SelectPhotoPage(
+                              model: model,
+                            )),
+                  );
+                },
+                style: ElevatedButton.styleFrom(
+                    fixedSize: const Size(240, double.infinity),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(10.0),
+                    ),
+                    backgroundColor: Colors.blue),
+                child: const Text(
+                  '画像でバズる',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20.0,
+                      fontWeight: FontWeight.w500),
+                )),
+          ],
         ),
       ),
     );
